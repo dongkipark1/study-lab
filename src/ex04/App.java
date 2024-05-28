@@ -1,14 +1,13 @@
 package ex04;
 
-import ex04.teacher.HtmlTeacher;
-import ex04.teacher.JavaTeacher;
-import ex04.teacher.PythonTeacher;
+/**
+ * 풀링 : Pooling (객체를 10개 유지하는 기법)
+ */
 
 public class App {
     public static void main(String[] args) {
-        JavaTeacher jt = new JavaTeacher();
-        PythonTeacher pt = new PythonTeacher();
-        HtmlTeacher ht = new HtmlTeacher();
-        pt.수업하기();
+        Animal tiger = new Tiger();
+        Doorman doorman = Doorman.instance;
+        doorman.쫓아내(tiger);
     }
 }
